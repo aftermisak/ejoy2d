@@ -16,9 +16,9 @@ struct render_init_args {
 };
 
 struct vertex_attrib {
-	const char * name;
+	const char * name;//?
 	int vbslot;
-	int n;
+	int n;//?
 	int size;
 	int offset;
 };
@@ -27,7 +27,7 @@ struct shader_init_args {
 	const char * vs;
 	const char * fs;
 	int texture;
-	const char **texture_uniform;
+	const char **texture_uniform;//name arrays
 };
 
 enum RENDER_OBJ {

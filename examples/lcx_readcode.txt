@@ -7,6 +7,7 @@ main
 		->screen_init
 			->glewPoint
 		->ejoy2d_game_start
+	windows消息循环
 
 主循环：
 	mingw/windows.c

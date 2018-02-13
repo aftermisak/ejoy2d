@@ -7,7 +7,7 @@ local game = {}
 local x = 0
 local y = 768
 
-function game.update()
+function game.update( dt )
 	x = x + 1
 	y = y - 1
 end
