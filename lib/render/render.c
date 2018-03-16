@@ -82,7 +82,7 @@ struct shader {
 	GLuint glid;
 #ifdef VAO_ENABLE
 	GLuint glvao;
-	RID vbslot[MAX_VB_SLOT];
+	RID vbslot[MAX_VB_SLOT];//useless? 
 	RID ib;
 #endif
 	int n;
