@@ -41,12 +41,25 @@ renderbuffer_add(struct render_buffer *rb, const struct vertex_pack vb[4], uint3
 
 }
 
+/*
+	尝试更新texid，texid实际上在render_buffer使用中
+只允许用一个值，所以使用中如果尝试设置一个新的texid，该函数返回1
+更新成功返回0
+*/
 static int
 update_tex(struct render_buffer *rb, int id) {
+	//if (rb->object == 0) {
+	//	rb->texid = id;
+	//} else if (rb->texid != id) {
+	//	return 1;
+	//}
 	if (rb->object == 0) {
 		rb->texid = id;
-	} else if (rb->texid != id) {
-		return 1;
+	}
+	else {
+		if (rb->texid != id) {
+			return 1;
+		}
 	}
 	return 0;
 }

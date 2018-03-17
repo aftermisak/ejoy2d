@@ -172,7 +172,7 @@ void
 render_buffer_update(struct render *R, RID id, const void * data, int n) {
 	struct buffer * buf = (struct buffer *)array_ref(&R->buffer, id);
 #ifdef VAO_ENABLE
-	glBindVertexArray(0);
+	glBindVertexArray(0);// ?
 #endif
 	R->changeflag |= CHANGE_VERTEXARRAY;
 	glBindBuffer(buf->gltype, buf->glid);
@@ -643,7 +643,7 @@ bind_texture(struct render *R, struct texture * tex, int slice, GLenum *type, in
 	}
 	glActiveTexture( GL_TEXTURE7 );
 	R->changeflag |= CHANGE_TEXTURE;
-	R->last.texture[7] = 0;	// use last texture slot
+	R->last.texture[7] = 0;	// use last texture slot, ??
 	glBindTexture( *type, tex->glid);
 }
 
@@ -829,7 +829,7 @@ render_target_create(struct render *R, int width, int height, enum TEXTURE_FORMA
 		return 0;
 	render_texture_update(R, tex, width, height, NULL, 0, 0);
 	RID rt = create_rt(R, tex);
-	glBindFramebuffer(GL_FRAMEBUFFER, R->default_framebuffer);
+	glBindFramebuffer(GL_FRAMEBUFFER, R->default_framebuffer);//绑定回默认的frame buffer
 	R->last.target = 0;
 	R->changeflag |= CHANGE_TARGET;
 

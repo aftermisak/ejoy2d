@@ -140,7 +140,7 @@ program_init(struct program * p, const char *FS, const char *VS, int texture, co
 	args.texture_uniform = texture_uniform_name;
 	p->prog = render_shader_create(R, &args);
 	render_shader_bind(R, p->prog);
-	render_shader_bind(R, 0);
+	render_shader_bind(R, 0);//0相当于重置，不激活任何glProgram
 }
 
 void 
@@ -148,7 +148,7 @@ shader_load(int prog, const char *fs, const char *vs, int texture, const char **
 	struct render_state *rs = RS;
 	assert(prog >=0 && prog < MAX_PROGRAM);
 	struct program * p = &rs->program[prog];
-	if (p->prog) {
+	if (p->prog) {//使用中先释放？？
 		render_release(RS->R, SHADER, p->prog);
 		p->prog = 0;
 	}
