@@ -15,12 +15,13 @@ struct render_init_args {
 	int max_shader;
 };
 
+//使用，参加shader_init
 struct vertex_attrib {
-	const char * name;//?
-	int vbslot;
-	int n;//?
-	int size;
-	int offset;
+	const char * name;//name for vertex attr
+	int vbslot;//index of Render::vbslot[]
+	int n;//glVertexAttribPointer第二个参数 指定每个顶点属性的组件数量。必须为1、2、3或者4。初始值为4。（如position是由3个（x,y,z）组成，而颜色是4个（r,g,b,a））
+	int size;//数据类型的字节大小比如 GL_UNSIGNED_BYTE 是1， GL_UNSIGNED_SHORT是2，GL_FLOAT是4
+	int offset; //偏移字节数
 };
 
 struct shader_init_args {
