@@ -264,6 +264,9 @@ apply_uniform(struct program *p) {
 void
 shader_program(int n, struct material *m) {
 	struct program *p = &RS->program[n];
+	/*
+		感觉这是一句设计不清晰导致的代码
+	*/
 	if (RS->current_program != n || p->reset_uniform || m) {
 		rs_commit();
 	}

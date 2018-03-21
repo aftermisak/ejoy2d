@@ -14257,9 +14257,9 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 986,
+									"left": 984,
 									"top": 524,
-									"width": 14.82177734375,
+									"width": 18,
 									"height": 13,
 									"autoResize": false,
 									"alpha": 0.5235987755982988,
@@ -14998,9 +14998,9 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 1160,
+									"left": 1158,
 									"top": 487,
-									"width": 14.82177734375,
+									"width": 18,
 									"height": 13,
 									"autoResize": false,
 									"alpha": 0.5235987755982988,
@@ -17620,6 +17620,7 @@
 								"$ref": "AAAAAAFiLN5i8QPzXlw="
 							},
 							"name": "texture_number",
+							"documentation": "texture uniform  的数量",
 							"visibility": "public",
 							"isStatic": false,
 							"isLeaf": false,
@@ -17638,6 +17639,7 @@
 								"$ref": "AAAAAAFiLN5i8QPzXlw="
 							},
 							"name": "uniform_number",
+							"documentation": "uniform 数量",
 							"visibility": "public",
 							"isStatic": false,
 							"isLeaf": false,
@@ -17656,6 +17658,7 @@
 								"$ref": "AAAAAAFiLN5i8QPzXlw="
 							},
 							"name": "uniform",
+							"documentation": "uniform 信息\n",
 							"visibility": "public",
 							"isStatic": false,
 							"isLeaf": false,
@@ -17675,6 +17678,7 @@
 								"$ref": "AAAAAAFiLN5i8QPzXlw="
 							},
 							"name": "reset_uniform",
+							"documentation": "shader_setuniform 设为true\nmaterial_apply 设为true\n\napply_uniform 设为false\n\n即如果当前program的unifom发生改变，会将这个值设为false\n",
 							"visibility": "public",
 							"isStatic": false,
 							"isLeaf": false,
@@ -18247,6 +18251,7 @@
 								"$ref": "AAAAAAFiLlEByFHKea8="
 							},
 							"name": "type",
+							"documentation": "uniform的类型",
 							"visibility": "public",
 							"isStatic": false,
 							"isLeaf": false,
