@@ -212,13 +212,13 @@ rs_commit() {
 
 void 
 shader_drawbuffer(struct render_buffer * rb, float tx, float ty, float scale) {
-	rs_commit();
+	rs_commit();//不管TMD先提交一次
 
 	RID glid = texture_glid(rb->texid);
 	if (glid == 0)
 		return;
-	shader_texture(glid, 0);
-	render_set(RS->R, VERTEXBUFFER, rb->vbid, 0);
+	shader_texture(glid, 0);//重置？
+	render_set(RS->R, VERTEXBUFFER, rb->vbid, 0);//重置
 
 	float sx = scale;
 	float sy = scale;
